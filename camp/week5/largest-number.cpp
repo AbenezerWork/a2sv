@@ -10,13 +10,9 @@ public:
         sort(nums.begin(), nums.end(),[&](string s, string t){
         return s+t>t+s;
         });
-        bool isz = true;
+        if(nums[0]=="0")return "0";
         for(auto i: nums){
-            if(i!="0")isz = false;
             ans+=i;
-        }
-        if(isz){
-            ans = "0";
         }
         return ans;
     }
