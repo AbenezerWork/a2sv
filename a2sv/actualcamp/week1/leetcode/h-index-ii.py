@@ -1,9 +1,7 @@
 class Solution:
     def hIndex(self, citations: List[int]) -> int:
-        a = [0]
-        a.extend(citations)
-        citations =  a
-        left, right = 0, len(citations) + 1
+        
+        left, right = -1, len(citations)
 
         while left + 1 <  right:
             mid = left+(right-left)//2
